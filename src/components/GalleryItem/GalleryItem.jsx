@@ -1,34 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { render } from 'react-dom';
 import './GalleryItem.css';
 
 
 const GalleryItem = ({picture}) => {
-  let toggle = true;
+  const [toggle, setToggle] = useState(true)
+
 
   const flipToggle = () => {
     if (toggle) {
-      toggle = false;
+      setToggle(false);
     } else {
-      toggle = true;
+      setToggle(true);
     }
   }
 
   const toggleImageDesc = () => {
     if (toggle) {
       return <img
+              onClick={flipToggle}
               key={picture.id}
               src={picture.path}
             />
     } else {
-      return <p>{picture.description}</p>
+      return <p onClick={flipToggle}>{picture.description}</p>
     };
   };
 
   return (
     <div>
       <div className='imageDiv'>
-        {toggleImageDesc()};
+        {toggleImageDesc()}
       </div>
       
       <button>Love it!</button>
