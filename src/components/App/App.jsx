@@ -1,9 +1,14 @@
 import Axios from 'axios';
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 
 function App() {
 
+  //useEffect 'on load'
+  useEffect(() => {
+    fetchImages();
+  }, []);
+  
   //AXIOS routes
 
   //GET /gallery
@@ -12,9 +17,9 @@ function App() {
     Axios.get('/gallery', {
 
     }).then((response) => {
-
+      console.log(galleryItems);
     }).catch((error) => {
-      
+
     })
   }
 
