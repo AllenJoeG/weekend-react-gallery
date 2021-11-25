@@ -1,7 +1,32 @@
+import Axios from 'axios';
 import React from 'react';
 import './App.css';
 
 function App() {
+
+  //AXIOS routes
+
+  //GET /gallery
+  const fetchImages = () => {
+
+    Axios.get('/gallery', {
+
+    }).then((response) => {
+
+    }).catch((error) => {
+      
+    })
+  }
+
+
+  //POST
+  
+
+  //PUT
+
+  //DELETE
+
+
     return (
       <div className="App">
         <header className="App-header">

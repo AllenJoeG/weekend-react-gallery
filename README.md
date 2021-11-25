@@ -1,9 +1,24 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+React Image Gallery
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+### Checklist
+
+#### Client-side
+  - App Component
+    - GalleryList Component
+    - GalleryItem Component
+
+#### Server-side
+  - CRUD Routes
+    - GET
+    - POST
+    - Update?
+    - Delete?
+
+
+
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
