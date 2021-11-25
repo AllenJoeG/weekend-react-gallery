@@ -7,13 +7,13 @@ React Image Gallery
 ### Checklist
 
 #### Client-side
-  - App Component
-    - GalleryList Component
-    - GalleryItem Component
+  - App Component 👍
+    - GalleryList Component 👍
+    - GalleryItem Component 👍
 
 #### Server-side
   - CRUD Routes
-    - GET
+    - GET 👍
     - POST
     - Update?
     - Delete?

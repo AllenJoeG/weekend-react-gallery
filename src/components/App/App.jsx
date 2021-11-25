@@ -1,6 +1,7 @@
 import Axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import GalleryList from '../GalleryList/GalleryList.jsx';
 
 function App() {
 
@@ -9,6 +10,9 @@ function App() {
     fetchImages();
   }, []);
   
+  //STATE store the gallery data
+  const [gallery, setGallery] = useState([])
+
   //AXIOS routes
 
   //GET /gallery
@@ -17,7 +21,8 @@ function App() {
     Axios.get('/gallery', {
 
     }).then((response) => {
-      console.log(galleryItems);
+      console.log(response.data);
+      setGallery(response.data);
     }).catch((error) => {
 
     })
@@ -37,8 +42,8 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        <GalleryList gallery={gallery} />
+
       </div>
     );
 }
