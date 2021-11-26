@@ -5,8 +5,8 @@ import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 function GalleryList({gallery, likeImage}) {
 
   return (
-    <ul>
-      <h2>Hello</h2>
+    <div className="galleryDiv">
+      {/* <h2>Hello</h2> */}
       
       {gallery.map((picture) => {
         return <GalleryItem 
@@ -16,7 +16,7 @@ function GalleryList({gallery, likeImage}) {
                 />
       })}
       
-    </ul>
+    </div>
   );
 };
 

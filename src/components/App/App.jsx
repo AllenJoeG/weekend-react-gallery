@@ -34,7 +34,6 @@ function App() {
 
   //PUT
   const likeImage = (id) => {
-    console.log(id);
     Axios.put(`/gallery/like/${id}`)
     fetchImages();
   }
@@ -48,7 +47,6 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <GalleryList gallery={gallery} likeImage={likeImage} />
-        <GalleryList gallery={gallery} />
       </div>
     );
 }
