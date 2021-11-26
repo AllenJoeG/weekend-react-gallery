@@ -30,7 +30,7 @@ const GalleryItem = ({picture, likeImage}) => {
   }
 
   return (
-    <div>
+    <div className="gallItemDiv">
       <div className='imageDiv'>
         {toggleImageDesc()}
       </div>

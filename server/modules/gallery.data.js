@@ -35,6 +35,30 @@ const galleryItems = [
         description: 'Moments before lightning struck the valley, State Park.',
         likes: 0
     },
+    {
+        id: 7,
+        path: 'images/Bouldering.jpeg',
+        description: 'A V5 problem in progress at Minneapolis Bouldering Project.',
+        likes: 0
+    },
+    {
+        id: 8,
+        path: 'images/Hammock.jpeg',
+        description: 'Sleeping in comfort and style on the Superior Hiking Trail.',
+        likes: 0
+    },
+    {
+        id: 9,
+        path: 'images/Rehearsal.jpeg',
+        description: 'Rehearsing MN Chorale at Orchestra Hall',
+        likes: 0
+    },
+    {
+        id: 10,
+        path: 'images/RiverBottom.jpeg',
+        description: 'River Bottom at St Anthony Falls during historic water drawdown',
+        likes: 0
+    },
 ];
 
 module.exports = galleryItems;
