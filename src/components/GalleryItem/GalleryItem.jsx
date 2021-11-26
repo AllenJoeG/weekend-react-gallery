@@ -3,16 +3,12 @@ import { render } from 'react-dom';
 import './GalleryItem.css';
 
 
-const GalleryItem = ({picture}) => {
+const GalleryItem = ({picture, likeImage}) => {
   const [toggle, setToggle] = useState(true)
 
 
   const flipToggle = () => {
-    if (toggle) {
-      setToggle(false);
-    } else {
-      setToggle(true);
-    }
+    setToggle(!toggle);
   }
 
   const toggleImageDesc = () => {
@@ -23,9 +19,15 @@ const GalleryItem = ({picture}) => {
               src={picture.path}
             />
     } else {
-      return <p onClick={flipToggle}>{picture.description}</p>
+      return <p onClick={flipToggle}>
+              {picture.description}
+            </p>
     };
   };
+
+  const onLoveClick = () => {
+    
+  }
 
   return (
     <div>
@@ -33,7 +35,7 @@ const GalleryItem = ({picture}) => {
         {toggleImageDesc()}
       </div>
       
-      <button>Love it!</button>
+      <button onClick={likeImage}>Love it!</button>
       <p> {picture.likes} people love this!</p>
     </div>
   );

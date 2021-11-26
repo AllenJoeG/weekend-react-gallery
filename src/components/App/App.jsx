@@ -25,14 +25,19 @@ function App() {
       setGallery(response.data);
     }).catch((error) => {
 
-    })
-  }
+    });
+  };
 
 
   //POST
   
 
   //PUT
+  const likeImage = () => {
+    console.log(this);
+    // Axios.put(`/gallery/like/${id}`)
+
+  }
 
   //DELETE
 
@@ -42,7 +47,7 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <GalleryList gallery={gallery} />
+        <GalleryList gallery={gallery} likeImage={likeImage} />
         <GalleryList gallery={gallery} />
       </div>
     );
