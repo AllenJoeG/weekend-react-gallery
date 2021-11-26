@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList.jsx';
 
+import Button from '@mui/material/Button';
+
 function App() {
 
   //useEffect 'on load'

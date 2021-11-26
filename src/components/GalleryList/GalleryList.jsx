@@ -2,6 +2,8 @@ import React from 'react';
 import './GalleryList.css';
 import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 
+import Button from '@mui/material/Button';
+
 function GalleryList({gallery, likeImage}) {
 
   return (

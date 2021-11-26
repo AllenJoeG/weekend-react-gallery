@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import { render } from 'react-dom';
 import './GalleryItem.css';
 
+import Button from '@mui/material/Button';
+
 
 const GalleryItem = ({picture, likeImage}) => {
   const [toggle, setToggle] = useState(true)
@@ -35,7 +37,7 @@ const GalleryItem = ({picture, likeImage}) => {
         {toggleImageDesc()}
       </div>
       
-      <button onClick={onLoveClick}>Love it!</button>
+      <Button variant="contained" onClick={onLoveClick}>Love it!</Button>
       <p> {picture.likes} people love this!</p>
     </div>
   );
