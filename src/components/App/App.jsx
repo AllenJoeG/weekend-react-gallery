@@ -33,10 +33,10 @@ function App() {
   
 
   //PUT
-  const likeImage = () => {
-    console.log(this);
-    // Axios.put(`/gallery/like/${id}`)
-
+  const likeImage = (id) => {
+    console.log(id);
+    Axios.put(`/gallery/like/${id}`)
+    fetchImages();
   }
 
   //DELETE

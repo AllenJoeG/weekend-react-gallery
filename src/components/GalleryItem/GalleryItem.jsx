@@ -26,7 +26,7 @@ const GalleryItem = ({picture, likeImage}) => {
   };
 
   const onLoveClick = () => {
-    
+    likeImage(picture.id)
   }
 
   return (
@@ -35,7 +35,7 @@ const GalleryItem = ({picture, likeImage}) => {
         {toggleImageDesc()}
       </div>
       
-      <button onClick={likeImage}>Love it!</button>
+      <button onClick={onLoveClick}>Love it!</button>
       <p> {picture.likes} people love this!</p>
     </div>
   );
