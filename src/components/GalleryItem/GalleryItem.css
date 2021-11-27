@@ -1,9 +1,8 @@
-.gallItemDiv {
+/* .gallItemDiv {
   width: 20%;
-  /* padding-bottom: 32%; Same as width, sets height */
-  margin-bottom: 2%; /* (100-32*3)/2 */
+  margin-bottom: 2%;
   position: relative;
-}
+} */
 
 /* .imageDiv {
   width: 32%;
@@ -21,6 +20,10 @@ img {
   height: 315px;
   width: 315px;
 }
+
+/* p {
+  color:antiquewhite;
+} */
 
 /* .MuiGrid-root {
   height: 450px;

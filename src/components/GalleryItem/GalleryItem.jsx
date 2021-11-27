@@ -35,9 +35,6 @@ const GalleryItem = ({picture, likeImage}) => {
     likeImage(picture.id)
   }
 
-  //Implementing Image List
-
-
 
 
 
@@ -52,42 +49,48 @@ const GalleryItem = ({picture, likeImage}) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
+      <Grid container spacing={{ xs: 2, sm: 2, md: 3, lg: 4 }} columns={{ xs: 4, sm: 8, md: 12, lg: 12}}>
 
-        <Grid item xs={12}>
+        <Grid item xs={2} md={4} lg={3}>
           <Item 
             className="imgDescItem"
             onClick={flipToggle}
             >
             {toggleImageDesc()}
             </Item>
-        </Grid>
-
-        <Grid item xs={6}>
-          <Item>
+            <Item>
             <Button variant="contained" onClick={onLoveClick}>
               Love it!
             </Button>
+            <p> {picture.likes} 😍</p>
+            {/* <Item></Item> */}
           </Item>
         </Grid>
-
-        <Grid item xs={2}>
-          <Item><p> {picture.likes} 😍</p></Item>
+{/* 
+        <Grid item xs={1} md={4}>
+          
         </Grid>
+
+        <Grid item xs={1} md={4}>
+          
+        </Grid> */}
       </Grid>
     </Box>
     
   );
 };
 
-{/* 
-  // <div className="gallItemDiv">
-  //   <div className='imageDiv'>
-  //     {toggleImageDesc()}
-  //   </div>
-    
-  //   <Button variant="contained" onClick={onLoveClick}>Love it!</Button>
-  //   <p> {picture.likes} people love this!</p>
-  // </div> */}
 
+//Functioning Base Mode
+//   return (
+//     <div className="gallItemDiv">
+//       <div className='imageDiv'>
+//         {toggleImageDesc()}
+//       </div>
+      
+//       <Button variant="contained" onClick={onLoveClick}>Love it!</Button>
+//       <p> {picture.likes} people love this!</p>
+//     </div>
+//   )
+// }
 export default GalleryItem;
