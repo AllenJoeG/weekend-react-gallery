@@ -49,7 +49,7 @@ const GalleryItem = ({picture, likeImage}) => {
       <Grid 
         
         container
-        spacing={{ xs: 2, sm: 2, md: 32, lg: 32 }} 
+        spacing={{ xs: 2, sm: 2, md: 16, lg: 16 }} 
         columns={{ xs: 4, sm: 8, md: 12, lg: 12}}>
 
         <Grid 
@@ -65,7 +65,7 @@ const GalleryItem = ({picture, likeImage}) => {
 
           <Item >
             <p><Button variant="contained" onClick={onLoveClick}>
-              Love it!
+              Give Us the Heart Eyes
             </Button> 😍 {picture.likes} 😍</p>
           </Item>
 
