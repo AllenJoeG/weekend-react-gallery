@@ -14,11 +14,12 @@ React Image Gallery
 #### Server-side
   - CRUD Routes
     - GET 👍
-    - POST
-    - Update?
-    - Delete?
+    - PUT 👍
 
-
+#### Stretch Goals
+  - Wrestle Material UI 👍
+  - Delete Route
+  - POST Route
 
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
