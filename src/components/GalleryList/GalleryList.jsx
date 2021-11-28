@@ -2,6 +2,7 @@ import React from 'react';
 import './GalleryList.css';
 import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 
+import Box from '@mui/material/Box';
 // import Button from '@mui/material/Button';
 // import ImageList from '@mui/material/ImageList';
 // import ImageListItem from '@mui/material/ImageListItem';
@@ -13,8 +14,11 @@ function GalleryList({gallery, likeImage}) {
 
 //Function Base Mode
   return (
-    <div className="galleryDiv">
-      {/* <h2>Hello</h2> */}
+    <Box 
+      sx={{ flexGrow: 1 }} 
+      className="galleryDiv"
+      padding="5px"
+    >  
       
       {gallery.map((picture) => {
         return <GalleryItem 
@@ -24,7 +28,7 @@ function GalleryList({gallery, likeImage}) {
                 />
       })}
       
-    </div>
+    </Box>
   );
 };
 

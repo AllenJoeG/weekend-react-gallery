@@ -35,9 +35,6 @@ const GalleryItem = ({picture, likeImage}) => {
     likeImage(picture.id)
   }
 
-
-
-
   //returning BOX GRID ITEM structure
   //MUI Item definition
   const Item = styled(Paper)(({ theme }) => ({
@@ -48,32 +45,31 @@ const GalleryItem = ({picture, likeImage}) => {
   }));
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={{ xs: 2, sm: 2, md: 3, lg: 4 }} columns={{ xs: 4, sm: 8, md: 12, lg: 12}}>
+    <Box >
+      <Grid 
+        
+        container
+        spacing={{ xs: 2, sm: 2, md: 32, lg: 32 }} 
+        columns={{ xs: 4, sm: 8, md: 12, lg: 12}}>
 
-        <Grid item xs={2} md={4} lg={3}>
+        <Grid 
+          item xs={2} md={12} lg={12}
+          
+        >
           <Item 
             className="imgDescItem"
             onClick={flipToggle}
-            >
+          >
             {toggleImageDesc()}
-            </Item>
-            <Item>
-            <Button variant="contained" onClick={onLoveClick}>
-              Love it!
-            </Button>
-            <p> {picture.likes} 😍</p>
-            {/* <Item></Item> */}
           </Item>
-        </Grid>
-{/* 
-        <Grid item xs={1} md={4}>
-          
-        </Grid>
 
-        <Grid item xs={1} md={4}>
-          
-        </Grid> */}
+          <Item >
+            <p><Button variant="contained" onClick={onLoveClick}>
+              Love it!
+            </Button> 😍 {picture.likes} 😍</p>
+          </Item>
+
+        </Grid>
       </Grid>
     </Box>
     

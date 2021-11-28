@@ -4,6 +4,8 @@ import './App.css';
 import GalleryList from '../GalleryList/GalleryList.jsx';
 
 import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 
 function App() {
 
@@ -44,15 +46,17 @@ function App() {
 
   //RETURN
     return (
-      <div className="App">
+      <Box
+        backgroundColor="darkGray"
+      >
+        <Container maxWidth="lg">
+          <header className="App-header">
+            <h3 className="App-title">A first pass at Material UI</h3>
+          </header>
 
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
-
-        <GalleryList gallery={gallery} likeImage={likeImage} />
-
-      </div>
+          <GalleryList gallery={gallery} likeImage={likeImage} />
+        </Container>
+      </Box>
     );
 };
 
