@@ -1,4 +1,5 @@
-/* .gallItemDiv {
+/* Styling for Base Function w/o MUI 
+.gallItemDiv {
   width: 20%;
   margin-bottom: 2%;
   position: relative;
@@ -20,12 +21,3 @@ img {
   height: 315px;
   width: 315px;
 }
-
-/* p {
-  color:antiquewhite;
-} */
-
-/* .MuiGrid-root {
-  height: 450px;
-  width: 450px;
-} */

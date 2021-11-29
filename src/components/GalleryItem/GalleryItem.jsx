@@ -36,9 +36,10 @@ const GalleryItem = ({picture, likeImage}) => {
   }
 
   //returning BOX GRID ITEM structure
-  //MUI Item definition
+  //MUI Item definition attempting MUI Styles on Paper element
   const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
+    
     padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.secondary,
@@ -58,11 +59,15 @@ const GalleryItem = ({picture, likeImage}) => {
           <Item 
             className="imgDescItem"
             onClick={flipToggle}
+            elevation={12}
           >
             {toggleImageDesc()}
           </Item>
 
-          <Item >
+          <Item 
+            elevation={12}
+            
+          >
             <p><Button variant="contained" onClick={onLoveClick}>
               Give Us the Heart Eyes
             </Button> 😍 {picture.likes} 😍</p>

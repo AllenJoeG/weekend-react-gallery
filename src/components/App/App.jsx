@@ -28,7 +28,7 @@ function App() {
       console.log(response.data);
       setGallery(response.data);
     }).catch((error) => {
-
+      console.log('Error fetching from server,', error)
     });
   };
 
@@ -39,7 +39,15 @@ function App() {
   //PUT
   const likeImage = (id) => {
     Axios.put(`/gallery/like/${id}`)
-    fetchImages();
+    .then((response) => {
+      console.log('Likes updated for', id, response)
+      // sendStatus(200);
+      fetchImages();
+    }).catch((error) => {
+      console.log('error PUTting', error);
+      // sendStatus(500);
+    });
+    
   }
 
   //DELETE

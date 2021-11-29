@@ -18,7 +18,7 @@ function GalleryList({gallery, likeImage}) {
       sx={{ flexGrow: 1 }} 
       className="galleryDiv"
       padding="5px"
-    >  
+      >  
       
       {gallery.map((picture) => {
         return <GalleryItem 
